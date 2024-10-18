@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+   
+    
+    <title>Web Design Mastery | MEDIBuddy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav__logo">MEDIBuddy</div>
+        <ul class="nav__links">
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">About Us</a></li>
+          <li class="link"><a href="#">Courses</a></li>
+          <li class="link"><a href="#">Pages</a></li>
+          <li class="link"><a href="#">Blog</a></li>
+          <li class="link"><a href="#">Contact</a></li>
+        </ul>
+        <button class="btnnn">Register Now</button>
+      </nav>
+      <header class="header">
+        <div class="content">
+          <h1><span>Harsh</span><br />Medical Store</h1>
+          <p>
+            Harsh Medical Store is your one-stop destination for all healthcare
+            and wellness needs. We offer a wide range of prescription and
+            over-the-counter medications, ensuring that you have access to the
+            best pharmaceutical products for every health condition. Our shelves
+            are stocked with essential vitamins, supplements, first-aid
+            supplies, and personal care products to keep you and your family in
+            top health. Whether you need pain relief, antibiotics, or healthcare
+            equipment like thermometers and blood pressure monitors.
+          </p>
+          <button class="btnnn">Get Services</button>
+        </div>
+        <div class="image">
+          <span class="image__bg"></span>
+          <img src="harsh2-removebg-preview (1).png" alt="header image" />
+          <div class="image__content image__content__1">
+            <span><i class="ri-user-3-line"></i></span>
+            <div class="details">
+              <h4>1520+</h4>
+              <p>Active Clients</p>
+            </div>
+          </div>
+          <div class="image__content image__content__2">
+            <ul>
+              <li>
+                <span><i class="ri-check-line"></i></span>
+                Get 20% off on every 1st month
+              </li>
+              <li>
+                <span><i class="ri-check-line"></i></span>
+                Expert Doctors
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="containerr">
+        <h2>Add Medicine</h2>
+        <input type="text" id="medicineName" placeholder="Enter medicine name" />
+        <button onclick="showAdditionalFields()">Add Details</button>
+
+        <div id="additionalFields" style="display: none;">
+            <input type="number" id="serialNumber" placeholder="SR.Number" />
+            <input type="text" id="brandName" placeholder="Enter Brand Name" />
+            <input type="text" id="genericName" placeholder="Enter Generic Name" />
+            <input type="text" id="stripes" placeholder="Enter stripes" />
+            <input type="text" id="mrp" placeholder="MRP" />
+            <input type="number" id="medicinePrice" placeholder="Enter price" />
+            <label for="manufactureDate">Manufacture Date</label>
+            <input type="date" id="manufactureDate" placeholder="Manufacture date" />
+            <label for="expiryDate">Expiry Date</label>
+            <input type="date" id="expiryDate" placeholder="Expiry date" />
+            <button onclick="addMedicine()">Submit Medicine</button>
+        </div>
+
+        <h2>View Medicines</h2>
+        <button onclick="toggleViewMedicines()">View Medicines</button>
+
+        <h2>Search Medicine</h2>
+        <input type="text" id="searchInput" placeholder="Search by name..." oninput="searchMedicine()" />
+        <div id="searchResult"></div>
+
+        <div class="med-list" id="medicineList"></div>
+    </div>
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
